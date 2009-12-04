@@ -75,7 +75,7 @@ tclsh tcl_blast_parser_123_V047.tcl BlastX.out BlastX.out.parsed 20 40 100 MATRI
     *  1 column: "Query" sequence ID
     *  2 column: "Subject" sequence ID
     *  3 column: description line for "Subject" sequence
-    *  4 column: normalized expectation (-log(Exp)/100) [note, that expectation is normalized between 0 and 1]
+    *  4 column: normalized expectation (-log(Exp)/100) (note, that expectation is normalized between 0 and 1)
     *  5 column: percent of identity
     *  6 column: number of perfect matches
     *  7 column: length of the alignment
