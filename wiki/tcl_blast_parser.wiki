@@ -26,8 +26,8 @@ blastall -p blastn -V T -F F -e 0.001 -b 10000 -v 10000 -d db_file -i input.fast
 
 tclsh tcl_blast_parser_123_V047.tcl BlastX.out BlastX.out.parsed 20 40 100 MATRIX
 
- * BlastN.out - blast output file
- * BlastN.out.parsed - file name prefix for parsed output files
+ * BlastX.out - blast output file
+ * BlastX.out.parsed - file name prefix for parsed output files
  * 20 - expect cutoff for MATRIX files
  * 40 - identity cutoff for MATRIX files
  * 100 - alignment length cutoff for MATRIX files
