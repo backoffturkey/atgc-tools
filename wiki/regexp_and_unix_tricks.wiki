@@ -1,0 +1,24 @@
+#regular expressions and basic Unix tools to process text files
+
+= Regular Expressions and Basic Unix Tools to process text files=
+
+*1. Modification of FASTA header (Velvet Contig file output):*
+
+{{{
+original header:
+>NODE_5_length_357_cov_3.380952
+TTTAGGGTAATTATTAGTTTTATTATGCGTATAGCAGTGGCCGATGAATCGTGTGGGATC
+...
+manipulations:
+perl -p -i -e 's/_length_/_/' fastassy_file
+perl -p -i -e 's/_cov_/_/' fastassy_file
+perl -p -i -e 's/\..*//' fastassy_file
+perl -p -i -e 's/NODE/MyAssy/' fastassy_file
+...
+final header:
+>MyAssy_5_357_3
+TTTAGGGTAATTATTAGTTTTATTATGCGTATAGCAGTGGCCGATGAATCGTGTGGGATC
+...
+}}}
+
+
