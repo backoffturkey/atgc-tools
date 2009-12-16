@@ -3,6 +3,8 @@
 
 = seqs_processor_and_translator usage =
 
+*seqs_processor_and_translator_bin_V136_AGCT.py version:*
+
 {{{
 bash-2.03$ python seqs_processor_and_translator_bin_V136_AGCT.py
 
@@ -90,3 +92,26 @@ bash-2.03$
 
   Note, log files can be viewed using Excel like spreadsheet editor
 }}}
+
+*sequence processor changes for seqs_processor_and_translator_bin_V144_AGCT.py version:*
+
+http://code.google.com/p/atgc-tools/source/browse/#svn/trunk
+
+1. fixed bug for processing of short sequences (script went into infinite loop if last sequence shorter than cutoff value)
+
+2. optional check for duplicated IDs (test for redundant IDs), for large sets (more than 100,000 sequences) it's reasonable to run without redundancy check, it works faster.
+
+3. there is a new option/argument: RDN_Y or RDN_N - ID redundancy check (see above)
+
+example run:
+
+{{{
+python seqs_processor_and_translator_bin_V144_AGCT.py file_in file_out DNA 0 1 NOBIN 24 SEQS RDN_Y
+}}}
+(slow with check for redundant IDs)
+
+{{{
+python seqs_processor_and_translator_bin_V144_AGCT.py file_in file_out DNA 0 1 NOBIN 24 SEQS RDN_N
+}}}
+(fast without test for duplicates in IDs)
+
