@@ -91,14 +91,14 @@ tclsh tcl_blast_parser_123_V047.tcl BlastX.out BlastX.out.parsed 20 40 100 MATRI
 
 *MATRIX output files (expect and identity):*
 
-*"`*`.matrix.expect:*
+*"`*`.matrix.expect":*
 
     * 1st and 2nd column: pair of sequence IDs
     * 3rd column: EXPECT value normalized between 0 and 1 (-log(Exp))/100
     * 4th column: identity values (0-100 range)
     * 5th column: length of the alignment
 
-*"`*`.matrix.identity:*
+*"`*`.matrix.identity":*
 
     * 1st and 2nd column: pair of sequence IDs
     * 3rd column: IDENTITY value normalized between 0 and 1 (identity`%` / 100)
